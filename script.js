@@ -28,10 +28,10 @@ for (let key in drums){
     keyboardInput.textContent = drums[key].toUpperCase()
     keyboardInput.classList.add("keys")
     //Making event listener for clickable image
-    image.addEventListener("click",() => {
+    image.onclick = () => {
         const audio = new Audio(`./sounds/${key}.wav`)
         audio.play()
-    })
+    }
     //Appending elements to HTML
     button.append(image,keyboardInput,drumText)
     container.append(button)
